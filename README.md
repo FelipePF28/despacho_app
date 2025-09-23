@@ -15,3 +15,15 @@ Aplicación móvil para una distribuidora de alimentos que permite **autenticaci
 ## Arquitectura y rutas de datos
 # despacho_app
 app despacho, semana 6
+/users/{uid}/locations/{epoch} -> { lat, lng, provider }
+/orders/{orderId} -> { userId, total, distanceKm, shippingCost }
+/fleet/{truckId}/freezerTemp -> number (°C)
+## Reglas de seguridad (demo)
+```json
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "users": { "$uid": { ".read": "auth.uid === $uid", ".write": "auth.uid === $uid" } }
+  }
+}
