@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="24dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:id="@+id/tvStatus" android:text="Listo"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnUbicacion" android:text="Guardar ubicación en tiempo real"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etTotal" android:hint="Total compra ($)"
+        android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etDist" android:hint="Distancia (km)"
+        android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnCalcular" android:text="Calcular despacho"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:id="@+id/tvResultado" android:text="Costo: $0"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
